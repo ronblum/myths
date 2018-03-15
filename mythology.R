@@ -15,7 +15,7 @@ Pantheon_of_the_Norse_Gods
 
 
 location <- c("Asgard", "Earth", "Hell", "Mt. Olympus")
-placement <- c("H", "M", "L", "H"
+placement <- c("H", "M", "L", "H")
 placement_factor <- factor(placement, ordered = TRUE, levels = c("L", "M", "H"))
 levels(placement_factor) <- c("Down Below", "In the Middle", "High Above")
 places <- data.frame(location, placement_factor)
@@ -61,32 +61,4 @@ in_deities %>%
 in_deities %>%
 	filter(Domain == "Underworld") %>%
 	count()
-
-library(dplyr)
-iris
-iris %>%
-	count(Species)
-iris %>%
-	filter(Species == "virginica")
-iris %>%
-	group_by(Species) %>%
-	summarize(lengthsum = sum(Petal.Length))
-iris %>%
-	group_by(Species) %>%
-	summarize(lengthsum = sum(Petal.Length), 
-			lengthavg = mean(Petal.Length),
-			lengthshortsum = mean(filter(Petal.Length < 5) %>% select(Petal.Length)),
-			widthsum = sum(Petal.Width),
-			widthavg = mean(Petal.Width),
-			records = n())
-iris %>%
-	filter(Species == "virginica") %>%
-	group_by(Species) %>%
-	summarize(lengthsum = sum(Petal.Length))
-iris %>%
-	sum(Petal.Length)
-iris %>%
-	filter(Species == "virginica") %>%
-	group_by(Species) %>%
-	sum(Petal.Length)
 
