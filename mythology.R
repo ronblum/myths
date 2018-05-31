@@ -11,9 +11,6 @@ deities
 str(deities)
 summary(deities)
 
-Pantheon_of_the_Norse_Gods
-
-
 location <- c("Asgard", "Earth", "Hell", "Mt. Olympus")
 placement <- c("H", "M", "L", "H")
 placement_factor <- factor(placement, ordered = TRUE, levels = c("L", "M", "H"))
@@ -40,7 +37,7 @@ in_deities %>%
 in_deities %>%
 	count(Home)
 in_deities %>%
-	filter(pantheon == "Norse")
+	filter(Pantheon == "Norse")
 in_deities %>%
 	filter(Pantheon == "Norse", Home == "Asgard")
 in_deities %>%
@@ -61,4 +58,5 @@ in_deities %>%
 in_deities %>%
 	filter(Domain == "Underworld") %>%
 	count()
+
 

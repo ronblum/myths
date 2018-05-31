@@ -1,8 +1,10 @@
 ---
-title: "Untitled"
+title: "Myths"
 author: "Ron Blum"
 date: "3/27/2018"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -11,20 +13,76 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+First, some info about a list of deities
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r deities}
+name <- c("Loki", "Thor", "Odin", "Athena", "Zeus", "Hades", "Hel", "Isis", "Minerva", "Jupiter", "Osiris", "Pluto", "Baldur", "Pan", "Echo", "Valkyrie", "Aphrodite", "Heracles", "Hercules")
+pantheon <- c("Norse", "Norse", "Norse", "Greek", "Greek", "Greek", "Norse", "Egyptian", "Roman", "Roman", "Egyptian", "Roman", "Norse", "Greek", "Greek", "Norse", "Greek", "Greek", "Roman")
+type <- c("god", "god", "god", "god", "god", "god", "god", "god", "god", "god", "god", "god", "god", "god", "other", "warrior", "god", "warrior", "warrior")
+domain <- c("Mischief", "Thunder", "Ruler", "Wisdom", "Ruler", "Underworld", "Underworld", "Nature", "Wisdom", "Ruler", "Underworld", "Underworld", "Beauty", "Nature", "Echo", "Fallen Heroes", "Beauty", "Strength", "Strength")
+gender <- c("M", "M", "M", "F", "M", "M", "F", "F", "F", "M", "M", "M", "M", "M", "F", "F", "F", "M", "M")
+gender_factor <- factor(gender)
+levels(gender_factor) <- c("Female", "Male")
+home <- c("Asgard", "Asgard", "Asgard", "Mt. Olympus", "Mt. Olympus", "Hell", "Hell", "Earth", "Mt. Olympus", "Mt. Olympus", "Hell", "Hell", "Asgard", "Earth", "Earth", "Earth", "Mt. Olympus", "Earth", "Earth")
+deities <- data.frame(name, pantheon, type, domain, gender_factor, home)
+deities
+str(deities)
+summary(deities)
 ```
 
-## Including Plots
+## Including Places
 
-You can also embed plots, for example:
+Next, some info about places:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r places, echo=FALSE}
+location <- c("Asgard", "Earth", "Hell", "Mt. Olympus")
+placement <- c("H", "M", "L", "H")
+placement_factor <- factor(placement, ordered = TRUE, levels = c("L", "M", "H"))
+levels(placement_factor) <- c("Down Below", "In the Middle", "High Above")
+places <- data.frame(location, placement_factor)
+summary(placement_factor)
+str(placement_factor)
+str(places)
+summary(places)
+places
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+And now some info from Excel
+```{r excel}
+library(tidyverse)
+library(readxl)
+library(dplyr)
+in_deities <- read_excel("Deities.xlsx")
+View(in_deities)
+in_deities
+in_deities[3:4,1:2]
+in_deities["Pantheon"]
+in_deities %>%
+	filter(Name == "Loki")
+in_deities %>%
+	count(Pantheon)
+in_deities %>%
+	count(Home)
+in_deities %>%
+	filter(Pantheon == "Norse")
+in_deities %>%
+	filter(Pantheon == "Norse", Home == "Asgard")
+in_deities %>%
+	filter(Pantheon == "Norse", Home == "Asgard")
+in_deities %>%
+	filter(Pantheon == "Greek", Home != "Mt. Olympus")
+in_deities %>%
+	count(Pantheon)
+in_deities %>%
+	count(Pantheon)
+in_deities %>%
+	filter(Pantheon != "Greek") %>%
+	count(Pantheon)
+in_deities %>%
+	count(Pantheon != "Greek")
+in_deities %>%
+	filter(Domain == "Underworld")
+in_deities %>%
+	filter(Domain == "Underworld") %>%
+	count()
+```
