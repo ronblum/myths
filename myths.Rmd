@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Generating Deities
 
 First, some info about a list of deities
 
@@ -30,7 +30,7 @@ str(deities)
 summary(deities)
 ```
 
-## Including Places
+## Locating Places
 
 Next, some info about places:
 
@@ -47,7 +47,10 @@ summary(places)
 places
 ```
 
+## Including Excel
+
 And now some info from Excel
+
 ```{r excel}
 library(tidyverse)
 library(readxl)
