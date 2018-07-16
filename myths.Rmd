@@ -60,6 +60,25 @@ View(in_deities)
 in_deities
 in_deities[3:4,1:2]
 in_deities["Pantheon"]
+```
+
+## Looking in
+
+Let's take a look inside
+
+```{r look}
+deities
+in_deities
+list()
+head(deities)
+head(in_deities)
+```
+
+## Plyring a bit
+
+Let's explore with dplyr
+
+```{r plyr}
 in_deities %>%
 	filter(Name == "Loki")
 in_deities %>%
