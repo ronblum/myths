@@ -54,7 +54,7 @@ places
 And now some info from Excel
 
 ```{r excel}
-library(tidyverse)
+# library(tidyverse)
 library(readxl)
 library(dplyr)
 in_deities <- read_excel("Deities.xlsx")
