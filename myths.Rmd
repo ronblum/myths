@@ -51,10 +51,10 @@ places
 
 ## Including Excel
 
-And now some info from Excel
+And here's some info from Excel
 
 ```{r excel}
-library(tidyverse)
+# library(tidyverse)
 library(readxl)
 library(dplyr)
 in_deities <- read_excel("Deities.xlsx")
