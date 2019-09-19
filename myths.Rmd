@@ -109,5 +109,3 @@ in_deities %>%
 	filter(Domain == "Underworld") %>%
 	count()
 ```
-
-And here's a minor change.
