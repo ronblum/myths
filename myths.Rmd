@@ -15,7 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Generating Deities
 
-First, some info about a list of deities
+First, some info about a list of deities.
+
 
 ```{r deities}
 name <- c("Loki", "Thor", "Odin", "Athena", "Zeus", "Hades", "Hel", "Isis", "Minerva", "Jupiter", "Osiris", "Pluto", "Baldur", "Pan", "Echo", "Valkyrie", "Aphrodite", "Heracles", "Hercules")
