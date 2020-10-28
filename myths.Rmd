@@ -3,10 +3,10 @@ title: "Myths"
 author: "Ron Blum"
 date: "3/27/2018"
 output:
+  word_document: default
   html_document: default
   pdf_document: 
     latex_engine: lualatex
-  word_document: default
 ---
 
 ```{r setup, include=FALSE}
