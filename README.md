@@ -1,7 +1,7 @@
 Myths
 ================
 
-This is just me playing around with `dpylr` basic and reading from an
+This is just me playing around with `dpylr` basics and reading from an
 Excel file.
 
 ## Getting Started
