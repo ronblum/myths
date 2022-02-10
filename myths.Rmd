@@ -3,10 +3,10 @@ title: "Myths"
 author: "Ron Blum"
 date: "3/27/2018"
 output:
-  word_document: default
-  html_document: default
   pdf_document: 
     latex_engine: lualatex
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Generating Deities
 
 First, some info about a list of deities.
-
 
 ```{r deities}
 name <- c("Loki", "Thor", "Odin", "Athena", "Zeus", "Hades", "Hel", "Isis", "Minerva", "Jupiter", "Osiris", "Pluto", "Baldur", "Pan", "Echo", "Valkyrie", "Aphrodite", "Heracles", "Hercules")
@@ -110,4 +109,3 @@ in_deities %>%
 	filter(Domain == "Underworld") %>%
 	count()
 ```
-

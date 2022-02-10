@@ -11,6 +11,7 @@ deities
 str(deities)
 summary(deities)
 
+
 location <- c("Asgard", "Earth", "Hell", "Mt. Olympus")
 placement <- c("H", "M", "L", "H")
 placement_factor <- factor(placement, ordered = TRUE, levels = c("L", "M", "H"))
