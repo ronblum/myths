@@ -9,12 +9,14 @@ output:
   word_document: default
 ---
 
+Added line 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Generating Deities
-
+Removed line
 First, some info about a list of deities.
 
 ```{r deities}
