@@ -3,6 +3,8 @@ title: "Myths"
 output: github_document
 ---
 
+Added from Ubuntu
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
