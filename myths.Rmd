@@ -9,14 +9,12 @@ output:
   word_document: default
 ---
 
-Added line 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Generating Deities
-Removed line
+
 First, some info about a list of deities.
 
 ```{r deities}
@@ -36,7 +34,7 @@ summary(deities)
 
 ## Locating Places
 
-Next, some info about places:
+Next, some info about places.
 
 ```{r places, echo=FALSE}
 location <- c("Asgard", "Earth", "Hell", "Mt. Olympus")
@@ -53,7 +51,7 @@ places
 
 ## Including Excel
 
-And here's some info from Excel
+And here's some info from Excel.
 
 ```{r excel}
 # library(tidyverse)
@@ -67,7 +65,7 @@ in_deities["Pantheon"]
 
 ## Looking in
 
-Let's take a look inside
+Let's take a look inside.
 
 ```{r look}
 deities
@@ -79,7 +77,7 @@ head(in_deities)
 
 ## Plyring a bit
 
-Let's explore with dplyr
+Let's explore with dplyr.
 
 ```{r plyr}
 in_deities %>%
@@ -111,3 +109,4 @@ in_deities %>%
 	filter(Domain == "Underworld") %>%
 	count()
 ```
+
