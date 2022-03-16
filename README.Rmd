@@ -4,6 +4,7 @@ output: github_document
 ---
 
 Added from Ubuntu
+Added from MacOS
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
