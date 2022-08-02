@@ -12,7 +12,7 @@ following:
 1.  Basic `dplyr` code
 2.  Excel
 3.  Mythology
-
+4.  ???
 
 Regular Table
 
@@ -20,7 +20,6 @@ Regular Table
 |------|------|
 | R1C1 | R1C2 |
 | R2C1 | R2C2 |
-
 
 
 Grid Table
