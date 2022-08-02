@@ -13,6 +13,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ## Generating Deities
 
 First, some info about a list of deities.
