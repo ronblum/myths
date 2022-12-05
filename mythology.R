@@ -19,8 +19,8 @@ levels(placement_factor) <- c("Down Below", "In the Middle", "High Above")
 places <- data.frame(location, placement_factor)
 summary(placement_factor)
 str(placement_factor)
-str(places)
 summary(places)
+str(places)
 places
 
 library(tidyverse)
