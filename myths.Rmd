@@ -3,9 +3,9 @@ title: "Myths"
 author: "Ron Blum"
 date: "3/27/2018"
 output:
+  html_document: default
   pdf_document: 
     latex_engine: lualatex
-  html_document: default
   word_document: default
 ---
 
@@ -80,7 +80,7 @@ head(in_deities)
 
 Let's explore with dplyr.
 
-```{r plyr}
+```{r dplyr}
 in_deities %>%
 	filter(Name == "Loki")
 in_deities %>%
