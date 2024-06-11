@@ -59,11 +59,3 @@ in_deities %>%
 in_deities %>%
 	filter(Domain == "Underworld") %>%
 	count()
-
-
-
-
-
-
-
-
